@@ -53,6 +53,26 @@ cdef class Canvas:
                 b = (pixel >> 16) & 0xFF
                 my_canvas.SetPixel(xstart+col, ystart+row, r, g, b)
 
+    def SetPixelsCrosshair(self, int xstart, int ystart, int width, int height, image):
+        cdef cppinc.FrameCanvas* my_canvas = <cppinc.FrameCanvas*>self.__getCanvas()
+        cdef int frame_width = my_canvas.width()
+        cdef int frame_height = my_canvas.height()
+        cdef int row, col
+        cdef uint8_t r, g, b
+        cdef uint32_t **image_ptr
+        cdef uint32_t pixel
+        image.load()
+        ptr_tmp = dict(image.im.unsafe_ptrs)['image32']
+        image_ptr = (<uint32_t **>(<uintptr_t>ptr_tmp))
+
+        for col in range(max(0, -xstart), min(width, frame_width - xstart)):
+            for row in range(max(0, -ystart), min(height, frame_height - ystart)):
+                pixel = image_ptr[row][col]
+                r = (pixel ) & 0xFF
+                g = (pixel >> 8) & 0xFF
+                b = (pixel >> 16) & 0xFF
+                my_canvas.SetPixel(xstart+col, ystart+row, r, g, b)
+
 cdef class FrameCanvas(Canvas):
     def __dealloc__(self):
         if <void*>self.__canvas != NULL:
