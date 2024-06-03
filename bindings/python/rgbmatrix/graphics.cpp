@@ -968,7 +968,7 @@ struct __pyx_obj_9rgbmatrix_4core_FrameCanvas {
  * 
  * cdef class RGBMatrix(Canvas):             # <<<<<<<<<<<<<<
  *     cdef cppinc.RGBMatrix *__matrix
- * 
+ * cdef class RGBMatrixOptions:
  */
 struct __pyx_obj_9rgbmatrix_4core_RGBMatrix {
   struct __pyx_obj_9rgbmatrix_4core_Canvas __pyx_base;
@@ -976,9 +976,9 @@ struct __pyx_obj_9rgbmatrix_4core_RGBMatrix {
 };
 
 
-/* "core.pxd":12
+/* "core.pxd":11
+ * cdef class RGBMatrix(Canvas):
  *     cdef cppinc.RGBMatrix *__matrix
- * 
  * cdef class RGBMatrixOptions:             # <<<<<<<<<<<<<<
  *     cdef cppinc.Options __options
  *     cdef cppinc.RuntimeOptions __runtime_options
@@ -1054,7 +1054,7 @@ static struct __pyx_vtabstruct_9rgbmatrix_4core_FrameCanvas *__pyx_vtabptr_9rgbm
  * 
  * cdef class RGBMatrix(Canvas):             # <<<<<<<<<<<<<<
  *     cdef cppinc.RGBMatrix *__matrix
- * 
+ * cdef class RGBMatrixOptions:
  */
 
 struct __pyx_vtabstruct_9rgbmatrix_4core_RGBMatrix {
@@ -3718,7 +3718,7 @@ static int __Pyx_modinit_type_import_code(void) {
    if (!__pyx_ptype_9rgbmatrix_4core_RGBMatrix) __PYX_ERR(2, 9, __pyx_L1_error)
   __pyx_vtabptr_9rgbmatrix_4core_RGBMatrix = (struct __pyx_vtabstruct_9rgbmatrix_4core_RGBMatrix*)__Pyx_GetVtable(__pyx_ptype_9rgbmatrix_4core_RGBMatrix->tp_dict); if (unlikely(!__pyx_vtabptr_9rgbmatrix_4core_RGBMatrix)) __PYX_ERR(2, 9, __pyx_L1_error)
   __pyx_ptype_9rgbmatrix_4core_RGBMatrixOptions = __Pyx_ImportType(__pyx_t_1, "rgbmatrix.core", "RGBMatrixOptions", sizeof(struct __pyx_obj_9rgbmatrix_4core_RGBMatrixOptions), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9rgbmatrix_4core_RGBMatrixOptions) __PYX_ERR(2, 12, __pyx_L1_error)
+   if (!__pyx_ptype_9rgbmatrix_4core_RGBMatrixOptions) __PYX_ERR(2, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_RefNannyFinishContext();
   return 0;
