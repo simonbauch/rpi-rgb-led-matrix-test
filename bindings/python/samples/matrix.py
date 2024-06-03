@@ -16,7 +16,7 @@ matrix = RGBMatrix(options = options)
 
 # Make image fit our screen.
 
-matrix.SetPixelsCrosshair(self, 10, 10)
+matrix.SetPixelsCrosshair(10, 10)
 
 try:
     print("Press CTRL-C to stop.")
