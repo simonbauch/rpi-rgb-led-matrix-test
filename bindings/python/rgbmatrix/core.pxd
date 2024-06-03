@@ -4,11 +4,10 @@ cdef class Canvas:
     cdef cppinc.Canvas *__getCanvas(self) except +
 
 cdef class FrameCanvas(Canvas):
- cdef cppinc.Canvas* __getCanvas(self) except +
+    cdef cppinc.Canvas* __getCanvas(self) except +
 
 cdef class RGBMatrix(Canvas):
-    cdef cppinc.RGBMatrix *__matrix
-
+    cdef cppinc.Canvas* __getCanvas(self) except +
 cdef class RGBMatrixOptions:
     cdef cppinc.Options __options
     cdef cppinc.RuntimeOptions __runtime_options
