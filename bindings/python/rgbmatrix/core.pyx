@@ -74,7 +74,7 @@ cdef class Canvas:
             if row==y1:
                 my_canvas.SetPixel(col, row, r, g, b)
                 print(row)
-                my_canvas.SetPixel(col, row-7, 128, 0, 0)
+                my_canvas.SetPixel(col, row-7, 200, 0, 0)
                 
            
             
