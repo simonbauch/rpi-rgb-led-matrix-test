@@ -61,6 +61,8 @@ cdef class Canvas:
         cdef int col = 0
         cdef uint8_t r, g, b
         cdef uint32_t color1 = 16448250
+        x1=x1-1
+        y1=y1-1
         r = (color1 ) & 0xFF
         g = (color1 >> 8) & 0xFF
         b = (color1 >> 16) & 0xFF

@@ -17,8 +17,17 @@ options.multiplexing=1
 matrix = RGBMatrix(options = options)
 
 # Make image fit our screen.
-
-matrix.SetPixelsCrosshair(15, 25)
+int x = 1
+int y = 1
+while true:
+    x=x+1
+    y=y+1
+    if x==32:
+        x=1
+    if y==32:
+        y=1
+    matrix.SetPixelsCrosshair(x, y)
+    time.sleep(100)
 
 try:
     print("Press CTRL-C to stop.")
