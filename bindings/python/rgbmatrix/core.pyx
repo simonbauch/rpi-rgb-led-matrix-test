@@ -57,7 +57,8 @@ cdef class Canvas:
         cdef cppinc.FrameCanvas* my_canvas = <cppinc.FrameCanvas*>self.__getCanvas()
         cdef int frame_width = my_canvas.width()
         cdef int frame_height = my_canvas.height()
-        cdef int row, col
+        cdef int row = 0
+        cdef int col = 0
         cdef uint8_t r, g, b
         cdef uint32_t color1 = 16448250
         r = (color1 ) & 0xFF
@@ -66,6 +67,8 @@ cdef class Canvas:
         for col in range(0, frame_width,1):
             if col==x1:
                 my_canvas.SetPixel(col, row, r, g, b)
+                for row in range(0, frame_height,1):
+                    my_canvas.SetPixel(col, row, r, g, b)
             
 
 cdef class FrameCanvas(Canvas):
