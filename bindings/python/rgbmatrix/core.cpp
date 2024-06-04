@@ -3315,7 +3315,7 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
  *             if row==y1:
  *                 my_canvas.SetPixel(col, row, r, g, b)             # <<<<<<<<<<<<<<
  *                 print(row)
- *                 my_canvas.SetPixel(col, row-8, 128, 0, 0)
+ *                 my_canvas.SetPixel(col, row-7, 128, 0, 0)
  */
       __pyx_v_my_canvas->SetPixel(__pyx_v_col, __pyx_v_row, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
@@ -3323,7 +3323,7 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
  *             if row==y1:
  *                 my_canvas.SetPixel(col, row, r, g, b)
  *                 print(row)             # <<<<<<<<<<<<<<
- *                 my_canvas.SetPixel(col, row-8, 128, 0, 0)
+ *                 my_canvas.SetPixel(col, row-7, 128, 0, 0)
  * 
  */
       __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_row); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 76, __pyx_L1_error)
@@ -3334,11 +3334,11 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
       /* "rgbmatrix/core.pyx":77
  *                 my_canvas.SetPixel(col, row, r, g, b)
  *                 print(row)
- *                 my_canvas.SetPixel(col, row-8, 128, 0, 0)             # <<<<<<<<<<<<<<
+ *                 my_canvas.SetPixel(col, row-7, 128, 0, 0)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-      __pyx_v_my_canvas->SetPixel(__pyx_v_col, (__pyx_v_row - 8), 0x80, 0, 0);
+      __pyx_v_my_canvas->SetPixel(__pyx_v_col, (__pyx_v_row - 7), 0x80, 0, 0);
 
       /* "rgbmatrix/core.pyx":74
  *         row=0
