@@ -19,7 +19,7 @@ matrix = RGBMatrix(options = options)
 # Make image fit our screen.
 x = 1
 y = 1
-while true:
+while True:
     x=x+1
     y=y+1
     if x==32:
