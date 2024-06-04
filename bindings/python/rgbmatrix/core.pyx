@@ -68,7 +68,7 @@ cdef class Canvas:
                 if col==y1 or row==x1:
                     if col==x1:
                         my_canvas.SetPixel(col, row, r, g, b)
-                    elif row==y1:
+                    elif row==y1 and row!=3:
                         my_canvas.SetPixel(col, row, r, g, b)
 
 cdef class FrameCanvas(Canvas):
