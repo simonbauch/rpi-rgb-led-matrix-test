@@ -12,7 +12,7 @@ options.chain_length = 1
 options.parallel = 1
 options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
 options.gpio_slowdown = 4  
-options.hardware_mapping=1
+options.multiplexing=1
 
 matrix = RGBMatrix(options = options)
 
