@@ -30,7 +30,7 @@ while True:
         y=1
     matrix.Clear()
     matrix.SetPixelsCrosshair(x, y)
-    time.sleep(0.1)
+    time.sleep(0.05)
 
 try:
     print("Press CTRL-C to stop.")
