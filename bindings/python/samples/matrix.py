@@ -8,11 +8,12 @@ from PIL import Image
 # Configuration for the matrix
 options = RGBMatrixOptions()
 options.rows = 32
-options.chain_length = 1
+options.chain_length = 4
 options.parallel = 1
 options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
 options.gpio_slowdown = 4  
 options.multiplexing=1
+options.pixel_mapper_config="U-mapper"
 
 matrix = RGBMatrix(options = options)
 
