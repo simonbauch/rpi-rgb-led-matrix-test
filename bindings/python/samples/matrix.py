@@ -17,8 +17,8 @@ options.multiplexing=1
 matrix = RGBMatrix(options = options)
 
 # Make image fit our screen.
-int x = 1
-int y = 1
+x = 1
+y = 1
 while true:
     x=x+1
     y=y+1
