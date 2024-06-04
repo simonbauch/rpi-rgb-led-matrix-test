@@ -66,9 +66,7 @@ cdef class Canvas:
         for col in range(0, frame_width,1):
             if col==x1:
                 my_canvas.SetPixel(col, row, r, g, b)
-            for row in range(0, frame_height,1):
-                if row==y1:
-                    my_canvas.SetPixel(col, row, r, g, b)
+            
 
 cdef class FrameCanvas(Canvas):
     def __dealloc__(self):
