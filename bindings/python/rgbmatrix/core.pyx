@@ -65,7 +65,7 @@ cdef class Canvas:
         b = (color1 >> 16) & 0xFF
         for col in range(0, frame_width,1):
             for row in range(0, frame_height,1):
-                if col==y1 and row==x1:
+                if col==y1:
                     if col==x1:
                         my_canvas.SetPixel(col, row, r, g, b)
                     elif row==y1:
