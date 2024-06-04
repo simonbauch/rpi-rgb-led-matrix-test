@@ -70,9 +70,10 @@ cdef class Canvas:
                 for row in range(0, frame_height,1):
                     my_canvas.SetPixel(col, row, r, g, b)
         row=0
-        for row in range(0, frame_width,1):
+        for row in range(0, frame_height,1):
             if row==y1:
                 my_canvas.SetPixel(col, row, r, g, b)
+                print(row)
                 
            
             
