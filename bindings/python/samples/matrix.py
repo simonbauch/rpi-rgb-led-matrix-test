@@ -26,6 +26,7 @@ while True:
         x=1
     if y==32:
         y=1
+    matrix.Clear()
     matrix.SetPixelsCrosshair(x, y)
     time.sleep(1)
 
