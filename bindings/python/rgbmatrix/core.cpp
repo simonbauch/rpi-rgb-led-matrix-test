@@ -3199,7 +3199,7 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
  *         for col in range(0, frame_width,1):
  *             for row in range(0, frame_height,1):             # <<<<<<<<<<<<<<
  *                 if col==y1 or row==x1:
- *                     if row==x1:
+ *                     if col==x1:
  */
     __pyx_t_5 = __pyx_v_frame_height;
     __pyx_t_6 = __pyx_t_5;
@@ -3210,7 +3210,7 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
  *         for col in range(0, frame_width,1):
  *             for row in range(0, frame_height,1):
  *                 if col==y1 or row==x1:             # <<<<<<<<<<<<<<
- *                     if row==x1:
+ *                     if col==x1:
  *                         my_canvas.SetPixel(col, row, r, g, b)
  */
       __pyx_t_9 = ((__pyx_v_col == __pyx_v_y1) != 0);
@@ -3227,18 +3227,18 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
         /* "rgbmatrix/core.pyx":69
  *             for row in range(0, frame_height,1):
  *                 if col==y1 or row==x1:
- *                     if row==x1:             # <<<<<<<<<<<<<<
+ *                     if col==x1:             # <<<<<<<<<<<<<<
  *                         my_canvas.SetPixel(col, row, r, g, b)
- *                     elif col==y1:
+ *                     elif row==y1:
  */
-        __pyx_t_8 = ((__pyx_v_row == __pyx_v_x1) != 0);
+        __pyx_t_8 = ((__pyx_v_col == __pyx_v_x1) != 0);
         if (__pyx_t_8) {
 
           /* "rgbmatrix/core.pyx":70
  *                 if col==y1 or row==x1:
- *                     if row==x1:
+ *                     if col==x1:
  *                         my_canvas.SetPixel(col, row, r, g, b)             # <<<<<<<<<<<<<<
- *                     elif col==y1:
+ *                     elif row==y1:
  *                         my_canvas.SetPixel(col, row, r, g, b)
  */
           __pyx_v_my_canvas->SetPixel(__pyx_v_col, __pyx_v_row, __pyx_v_r, __pyx_v_g, __pyx_v_b);
@@ -3246,26 +3246,26 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
           /* "rgbmatrix/core.pyx":69
  *             for row in range(0, frame_height,1):
  *                 if col==y1 or row==x1:
- *                     if row==x1:             # <<<<<<<<<<<<<<
+ *                     if col==x1:             # <<<<<<<<<<<<<<
  *                         my_canvas.SetPixel(col, row, r, g, b)
- *                     elif col==y1:
+ *                     elif row==y1:
  */
           goto __pyx_L10;
         }
 
         /* "rgbmatrix/core.pyx":71
- *                     if row==x1:
+ *                     if col==x1:
  *                         my_canvas.SetPixel(col, row, r, g, b)
- *                     elif col==y1:             # <<<<<<<<<<<<<<
+ *                     elif row==y1:             # <<<<<<<<<<<<<<
  *                         my_canvas.SetPixel(col, row, r, g, b)
  * 
  */
-        __pyx_t_8 = ((__pyx_v_col == __pyx_v_y1) != 0);
+        __pyx_t_8 = ((__pyx_v_row == __pyx_v_y1) != 0);
         if (__pyx_t_8) {
 
           /* "rgbmatrix/core.pyx":72
  *                         my_canvas.SetPixel(col, row, r, g, b)
- *                     elif col==y1:
+ *                     elif row==y1:
  *                         my_canvas.SetPixel(col, row, r, g, b)             # <<<<<<<<<<<<<<
  * 
  * cdef class FrameCanvas(Canvas):
@@ -3273,9 +3273,9 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
           __pyx_v_my_canvas->SetPixel(__pyx_v_col, __pyx_v_row, __pyx_v_r, __pyx_v_g, __pyx_v_b);
 
           /* "rgbmatrix/core.pyx":71
- *                     if row==x1:
+ *                     if col==x1:
  *                         my_canvas.SetPixel(col, row, r, g, b)
- *                     elif col==y1:             # <<<<<<<<<<<<<<
+ *                     elif row==y1:             # <<<<<<<<<<<<<<
  *                         my_canvas.SetPixel(col, row, r, g, b)
  * 
  */
@@ -3286,7 +3286,7 @@ static PyObject *__pyx_pf_9rgbmatrix_4core_6Canvas_4SetPixelsCrosshair(struct __
  *         for col in range(0, frame_width,1):
  *             for row in range(0, frame_height,1):
  *                 if col==y1 or row==x1:             # <<<<<<<<<<<<<<
- *                     if row==x1:
+ *                     if col==x1:
  *                         my_canvas.SetPixel(col, row, r, g, b)
  */
       }
