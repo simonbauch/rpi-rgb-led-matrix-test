@@ -24,9 +24,9 @@ y = 1
 while True:
     x=x+1
     y=y+1
-    if x==32:
+    if x==64:
         x=1
-    if y==32:
+    if y==64:
         y=1
     matrix.Clear()
     matrix.SetPixelsCrosshair(x, y)
