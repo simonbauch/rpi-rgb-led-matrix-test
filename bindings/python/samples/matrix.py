@@ -9,7 +9,7 @@ from PIL import Image
 options = RGBMatrixOptions()
 options.rows = 32
 options.cols = 32
-options.chain_length = 4
+options.chain_length = 8
 options.parallel = 1
 options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
 options.gpio_slowdown = 4  
