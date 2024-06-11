@@ -53,14 +53,13 @@ cdef class Canvas:
                 b = (pixel >> 16) & 0xFF
                 my_canvas.SetPixel(xstart+col, ystart+row, r, g, b)
 
-    def SetPixelsCrosshair(self, int x1, int y1):
+    def SetPixelsCrosshair(self, int x1, int y1, uint32_t color1):
         cdef cppinc.FrameCanvas* my_canvas = <cppinc.FrameCanvas*>self.__getCanvas()
         cdef int frame_width = my_canvas.width()
         cdef int frame_height = my_canvas.height()
         cdef int row = 0
         cdef int col = 0
         cdef uint8_t r, g, b
-        cdef uint32_t color1 = 16448250
         x1=x1-1
         y1=y1-1
         r = (color1 ) & 0xFF
@@ -70,6 +69,32 @@ cdef class Canvas:
             for row in range(0, frame_height,1):
                     if col==x1 or row==y1:
                         my_canvas.SetPixel(col, row, r, g, b)
+
+    def SetPixelstwoCrosshair(self, int x1, int y1, int x2, int y2, uint32_t color1, uint32_t color2):
+        cdef cppinc.FrameCanvas* my_canvas = <cppinc.FrameCanvas*>self.__getCanvas()
+        cdef int frame_width = my_canvas.width()
+        cdef int frame_height = my_canvas.height()
+        cdef int row = 0
+        cdef int col = 0
+        cdef uint8_t r1, g1, b1, r2, g2, b2
+        x1=x1-1
+        y1=y1-1
+        x2=x2-1
+        y2=y2-1
+        r1 = (color1 ) & 0xFF
+        g1 = (color1 >> 8) & 0xFF
+        b1 = (color1 >> 16) & 0xFF
+        r2 = (color2 ) & 0xFF
+        g2 = (color2 >> 8) & 0xFF
+        b2 = (color2 >> 16) & 0xFF
+        for col in range(0, frame_width,1):
+            for row in range(0, frame_height,1):
+                    if col==x1 or row==y1:
+                        my_canvas.SetPixel(col, row, r1, g1, b1)
+                    if col==x2 or row==y2:
+                        if x1!=x2 and y1!=y2:
+                            my_canvas.SetPixel(col, row, r2, g2, b2)
+                    
     
            
             

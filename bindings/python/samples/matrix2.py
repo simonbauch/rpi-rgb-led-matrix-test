@@ -19,18 +19,28 @@ options.pixel_mapper_config = "U-mapper"
 matrix = RGBMatrix(options = options)
 
 # Make image fit our screen.
-x = 1
-y = 1
-color = 16448250
+x1 = 1
+y1 = 1
+x2 = 32
+y2 = 16
+color1 = 16448250
+color2 = 16333250
 while True:
-    x=x+1
-    y=y+1
-    if x==64:
-        x=1
-    if y==64:
-        y=1
+    x1=x1+1
+    y1=y1+1
+    if x1==64:
+        x1=1
+    if y1==64:
+        y1=1
+       x1=x1+1
+    x2=x2+1
+    y2=y2+1
+    if x2==64:
+        x2=1
+    if y2==64:
+        y2=1
     matrix.Clear()
-    matrix.SetPixelsCrosshair(x, y,color)
+    matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color2)
     time.sleep(0.01)
 
 try:
