@@ -32,7 +32,7 @@ while True:
         x1=1
     if y1==64:
         y1=1
-       x1=x1+1
+    x1=x1+1
     x2=x2+1
     y2=y2+1
     if x2==64:
