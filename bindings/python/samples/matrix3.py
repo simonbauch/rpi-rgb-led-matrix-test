@@ -24,7 +24,7 @@ y1 = 10
 x2 = 125
 y2 = 125
 color1 = 16448250
-color2 = 1745404
+color2 = 1745404 #Das passende Orange
 
 matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color2)
 try:

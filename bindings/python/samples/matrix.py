@@ -21,13 +21,13 @@ matrix = RGBMatrix(options = options)
 # Make image fit our screen.
 x = 1
 y = 1
-color = 16448250
+color = 1745404 #das oragne
 while True:
     x=x+1
     y=y+1
-    if x==64:
+    if x==160:
         x=1
-    if y==64:
+    if y==160:
         y=1
     matrix.Clear()
     matrix.SetPixelsCrosshair(x, y,color)
