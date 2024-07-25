@@ -24,7 +24,7 @@ y1 = 1
 x2 = 32
 y2 = 16
 color1 = 16448250
-color2 = 16333250
+color2 = 16003250
 while True:
     x1=x1+1
     y1=y1+1
