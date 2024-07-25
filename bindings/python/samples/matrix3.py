@@ -19,10 +19,10 @@ options.pixel_mapper_config = "U-mapper"
 matrix = RGBMatrix(options = options)
 
 # Make image fit our screen.
-x1 = 1
-y1 = 1
-x2 = 100
-y2 = 100
+x1 = 10
+y1 = 10
+x2 = 125
+y2 = 125
 color1 = 16448250
 color2 = 16003250
 
