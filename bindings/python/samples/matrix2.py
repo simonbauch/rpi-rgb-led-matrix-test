@@ -32,11 +32,10 @@ while True:
         x1=1
     if y1==160:
         y1=1
-    x1=x1+1
-    x2=x2+1
-    y2=y2+1
+    x2=x2+2
+    y2=y2+2
     if x2==224:
-        x2=160
+        x2=1
     if y2==64:
         y2=1
     matrix.Clear()
