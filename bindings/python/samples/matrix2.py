@@ -20,9 +20,9 @@ matrix = RGBMatrix(options = options)
 
 # Make image fit our screen.
 x1 = 1
-y1 = 25
-x2 = 95
-y2 = 16
+y1 = 1
+x2 = 100
+y2 = 100
 color1 = 16448250
 color2 = 16003250
 while True:
@@ -32,8 +32,8 @@ while True:
         x1=1
     if y1==160:
         y1=1
-    x2=x2+2
-    y2=y2+2
+    x2=x2+1
+    y2=y2+1
     if x2==224:
         x2=1
     if y2==64:
