@@ -1,6 +1,8 @@
 import asyncio, telnetlib3
 
 async def shell(reader, writer):
+    x1 = 0
+    y1 = 0
     while True:
         # read stream until '?' mark is found
         outp = await reader.read(1024)
@@ -8,8 +10,32 @@ async def shell(reader, writer):
             # End of File
             break
         elif 'ok' in outp:
-            # reply all questions with 'y'.
-            writer.write('0A;128;128;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok')
+            
+            if x1<10:       #Daten ins Format bringen
+                x1s="00"+str(x1)
+            elif x1<100:
+                x1s="0"+str(x1)
+            else:
+                x1s=str(x1)
+            if y1<10:
+                y1s="00"+str(y1)
+            elif y1<100:
+                y1s="0"+str(y1)
+            else:
+                y1s=str(y1)
+            
+            out = "0A;"+x1s+";"+y1s+";xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
+            print(out)
+            writer.write(out)
+            if  x1 > 200:
+                x1=0
+            else:
+                x1 = x1 + 1
+            if  y1 > 100:
+                y1=0
+            else:
+                y1 = y1 + 1
+                
 
         # display all server output
         print(outp, flush=True)

@@ -68,6 +68,7 @@ async def shell(reader, writer):
                     y1 = int(data2)
                     print(x1)
                     print(y1)
+                    matrix.Clear()
                     matrix.SetPixelsCrosshair(x1, y1,color1)
                     time.sleep(0.01)
 
