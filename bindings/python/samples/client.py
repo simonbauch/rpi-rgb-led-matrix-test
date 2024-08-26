@@ -5,6 +5,11 @@ import time
 async def shell(reader, writer):
     x1 = 0
     y1 = 0
+    x2 = 100
+    y2 = 20
+    x3 = 66
+    y3 = 88
+    
     while True:
         # read stream until '?' mark is found
         outp = await reader.read(1024)
@@ -26,7 +31,33 @@ async def shell(reader, writer):
             else:
                 y1s=str(y1)
             
-            out = "0C;"+x1s+";"+y1s+";060;100;090;200;xxx;xxx;xxx;xxx;xxx;xxx;ok"
+            if x2<10:       #Daten ins Format bringen
+                x2s="00"+str(x2)
+            elif x2<100:
+                x2s="0"+str(x2)
+            else:
+                x2s=str(x2)
+            if y2<10:
+                y2s="00"+str(y2)
+            elif y2<100:
+                y2s="0"+str(y2)
+            else:
+                y2s=str(y2)
+            
+            if x3<10:       #Daten ins Format bringen
+                x3s="00"+str(x3)
+            elif x3<100:
+                x3s="0"+str(x3)
+            else:
+                x3s=str(x3)
+            if y3<10:
+                y3s="00"+str(y3)
+            elif y3<100:
+                y3s="0"+str(y3)
+            else:
+                y3s=str(y3)
+            
+            out = "0C;"+x1s+";"+y1s+";"+x2s+";"+y2s+";"+x3s+";"+y3s+";xxx;xxx;xxx;xxx;xxx;xxx;ok"
             print(out)
             writer.write(out)
             if  x1 > 224:
@@ -37,6 +68,24 @@ async def shell(reader, writer):
                 y1=0
             else:
                 y1 = y1 + 1
+            
+            if  x2 > 224:
+                x2=0
+            else:
+                x2 = x2 + 1
+            if  y2 > 160:
+                y2=0
+            else:
+                y2 = y2 + 1
+            
+            if  x3 > 224:
+                x3=0
+            else:
+                x3 = x3 + 1
+            if  y3 > 160:
+                y3=0
+            else:
+                y3 = y3 + 1
             #time.sleep(0.05)
                 
 
