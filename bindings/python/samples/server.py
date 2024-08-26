@@ -73,7 +73,7 @@ async def shell(reader, writer):
                     #matrix.SetPixelsCrosshair(x1-1, y1-1,color1_1)
                     matrix.SetPixelsCrosshair(x1, y1,color1)
                     #matrix.SetPixelsCrosshair(x1+1, y1+1,color1_1)
-                    time.sleep(0.05)
+                    time.sleep(0.02)
 
                 elif mode == '0B':
                     #code for double crosshair here
