@@ -20,6 +20,7 @@ options.pixel_mapper_config = "U-mapper"
 matrix = RGBMatrix(options = options)
 
 color1 = 1745404
+color1_1 = 910599
 color2 = 1745404 #Das passende Orange
 color3 = 345212
 
@@ -84,7 +85,7 @@ async def shell(reader, writer):
                     print(x2)
                     print(y2)
                     matrix.Clear()
-                    matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color2)
+                    matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color1_1)
                     time.sleep(0.01)
                 elif mode == '0C':
                     #code for tripple crosshair here
