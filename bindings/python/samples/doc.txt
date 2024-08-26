@@ -1,0 +1,15 @@
+Dokumentiation der Textbefele zur Steuerung der LED Matrix:
+Sampe:  0A;128;128;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok
+
+2-Bytes Mode:
+    00: Test
+    0A: Single Crosshair (6Bytes Daten) (XXX;YYY)
+    0B: Dual Crosshair   (12Bytes Daten)
+    0C: Tripple Crosshair (not implemented) (18Bytes Daten)
+    1A: Setcolor1 (XXX;XXX;XXX;YYY;YYY;YYY;ZZZ;ZZZ;ZZZ) (color1;color2;color3)
+
+36-Bytes Daten:
+    Koordinaten getrennt duch;
+    xxx (empty data)
+2-Bytes end of file:
+    ok
