@@ -1,4 +1,6 @@
 import asyncio, telnetlib3
+import time
+
 
 async def shell(reader, writer):
     x1 = 0
@@ -27,14 +29,15 @@ async def shell(reader, writer):
             out = "0A;"+x1s+";"+y1s+";xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
             print(out)
             writer.write(out)
-            if  x1 > 200:
+            if  x1 > 224:
                 x1=0
             else:
                 x1 = x1 + 1
-            if  y1 > 100:
+            if  y1 > 160:
                 y1=0
             else:
                 y1 = y1 + 1
+            time.sleep(0.05)
                 
 
         # display all server output

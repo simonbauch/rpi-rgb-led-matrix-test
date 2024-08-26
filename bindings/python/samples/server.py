@@ -19,7 +19,7 @@ options.pixel_mapper_config = "U-mapper"
 
 matrix = RGBMatrix(options = options)
 
-color1 = 16448250
+color1 = 1745404
 color2 = 1745404 #Das passende Orange
 color3 = 345212
 
