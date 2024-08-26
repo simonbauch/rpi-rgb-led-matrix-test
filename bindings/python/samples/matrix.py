@@ -25,9 +25,9 @@ color = 1745404 #das oragne
 while True:
     x=x+1
     y=y+1
-    if x==160:
+    if x==224:
         x=1
-    if y==224:
+    if y==160:
         y=1
     matrix.Clear()
     matrix.SetPixelsCrosshair(x, y,color)
