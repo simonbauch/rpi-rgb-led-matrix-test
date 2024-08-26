@@ -105,7 +105,7 @@ async def shell(reader, writer):
                     print(x3)
                     print(y3)
                     matrix.Clear()
-                    matrix.SetPixelsthreeCrosshair(x1,y1,x2,y2,x3,y3color1,color2,color3)
+                    matrix.SetPixelsthreeCrosshair(x1,y1,x2,y2,x3,y3,color1,color2,color3)
                     time.sleep(0.01)
                 elif mode == '1A':
                     #code for farbsetzten here
