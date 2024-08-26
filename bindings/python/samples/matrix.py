@@ -27,7 +27,7 @@ while True:
     y=y+1
     if x==160:
         x=1
-    if y==160:
+    if y==224:
         y=1
     matrix.Clear()
     matrix.SetPixelsCrosshair(x, y,color)
