@@ -70,9 +70,9 @@ async def shell(reader, writer):
                     print(x1)
                     print(y1)
                     matrix.Clear()
-                    matrix.SetPixelsCrosshair(x1-1, y1-1,color1_1)
+                    #matrix.SetPixelsCrosshair(x1-1, y1-1,color1_1)
                     matrix.SetPixelsCrosshair(x1, y1,color1)
-                    matrix.SetPixelsCrosshair(x1+1, y1+1,color1_1)
+                    #matrix.SetPixelsCrosshair(x1+1, y1+1,color1_1)
                     time.sleep(0.01)
 
                 elif mode == '0B':
