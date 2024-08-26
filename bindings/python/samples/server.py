@@ -69,11 +69,11 @@ async def shell(reader, writer):
                     y1 = int(data2)
                     print(x1)
                     print(y1)
-                    #matrix.Clear()
+                    matrix.Clear()
                     #matrix.SetPixelsCrosshair(x1-1, y1-1,color1_1)
                     matrix.SetPixelsCrosshair(x1, y1,color1)
                     #matrix.SetPixelsCrosshair(x1+1, y1+1,color1_1)
-                    #time.sleep(0.02)
+                    time.sleep(0.02)
 
                 elif mode == '0B':
                     #code for double crosshair here
@@ -91,8 +91,22 @@ async def shell(reader, writer):
                     time.sleep(0.01)
                 elif mode == '0C':
                     #code for tripple crosshair here
-                    
                     print('tripple')
+                    x1 = int(data1)
+                    y1 = int(data2)
+                    x2 = int(data3)
+                    y2 = int(data4)
+                    x3 = int(data5)
+                    y3 = int(data6)
+                    print(x1)
+                    print(y1)
+                    print(x2)
+                    print(y2)
+                    print(x3)
+                    print(y3)
+                    matrix.Clear()
+                    matrix.SetPixelsthreeCrosshair(x1,y1,x2,y2,x3,y3color1,color2,color3)
+                    time.sleep(0.01)
                 elif mode == '1A':
                     #code for farbsetzten here
                     print('color')
