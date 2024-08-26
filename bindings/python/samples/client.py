@@ -37,7 +37,7 @@ async def shell(reader, writer):
                 y1=0
             else:
                 y1 = y1 + 1
-            time.sleep(0.05)
+            #time.sleep(0.05)
                 
 
         # display all server output
