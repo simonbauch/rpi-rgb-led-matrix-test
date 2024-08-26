@@ -26,7 +26,7 @@ async def shell(reader, writer):
             else:
                 y1s=str(y1)
             
-            out = "0A;"+x1s+";"+y1s+";xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
+            out = "0B;"+x1s+";"+y1s+";060;100;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
             print(out)
             writer.write(out)
             if  x1 > 224:

@@ -75,6 +75,17 @@ async def shell(reader, writer):
                 elif mode == '0B':
                     #code for double crosshair here
                     print('double')
+                    x1 = int(data1)
+                    y1 = int(data2)
+                    x2 = int(data3)
+                    y2 = int(data4)
+                    print(x1)
+                    print(y1)
+                    print(x2)
+                    print(y2)
+                    matrix.Clear()
+                    matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color2)
+                    time.sleep(0.01)
                 elif mode == '0C':
                     #code for tripple crosshair here
                     print('tripple')
