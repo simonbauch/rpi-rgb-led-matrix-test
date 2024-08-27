@@ -125,7 +125,12 @@ async def shell(reader, writer):
                 print (data12)
                 out = "1A;"+data1+";"+data2+";"+data3+";"+data4+";"+data5+";"+data6+";"+data7+";"+data8+";"+data9+";"+data10+";"+data11+";"+data12+";ok"
                 print(out)
-                writer.write(out)    
+                writer.write(out)
+            elif mode == 2:
+                mode = 1
+                out = "00;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
+                print(out)
+                writer.write(out)
 
         # display all server output
         print(outp, flush=True)
