@@ -92,7 +92,7 @@ async def shell(reader, writer):
                 mode = 0
                 color1 = 9999999
                 color2 = 872574
-                color3 = 1999999
+                color3 = 100909
                 color1_s = "000000000000"+str(color1)
                 color2_s = "000000000000"+str(color2)
                 color3_s = "000000000000"+str(color3)
