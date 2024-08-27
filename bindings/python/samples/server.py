@@ -16,7 +16,7 @@ options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-ha
 options.gpio_slowdown = 4  
 options.multiplexing = 1
 options.pixel_mapper_config = "U-mapper"
-options.drop_privileges=False
+options.drop_privileges=True
 
 matrix = RGBMatrix(options = options)
 
