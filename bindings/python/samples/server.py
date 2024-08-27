@@ -137,22 +137,32 @@ async def shell(reader, writer):
                         time.sleep(0.01)
                 elif mode == '2A':
                     print("Set large Mode")
-                    options.chain_length = 14
-                    matrix = RGBMatrix(options = options)
+                    options2 = RGBMatrixOptions()
+                    options2.rows = 32
+                    options2.cols = 32
+                    options2.chain_length = 10
+                    options2.parallel = 3 #
+                    options2.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
+                    options2.gpio_slowdown = 4  
+                    options2.multiplexing = 1
+                    options2.pixel_mapper_config = "U-mapper"
+                    options2.drop_privileges=False
+                    matrix = RGBMatrix(options = options2)
+                    
                 elif mode == '2B':
                     print("Set to small mode")
                     #MAtrix zerstören und mit neuen Options erneut erstellen
-                    options = RGBMatrixOptions()
-                    options.rows = 32
-                    options.cols = 32
-                    options.chain_length = 10
-                    options.parallel = 3 #
-                    options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
-                    options.gpio_slowdown = 4  
-                    options.multiplexing = 1
-                    options.pixel_mapper_config = "U-mapper"
-                    options.drop_privileges=False
-                    matrix = RGBMatrix(options = options)
+                    options3 = RGBMatrixOptions()
+                    options3.rows = 32
+                    options3.cols = 32
+                    options3.chain_length = 10
+                    options3.parallel = 3 #
+                    options3.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
+                    options3.gpio_slowdown = 4  
+                    options3.multiplexing = 1
+                    options3.pixel_mapper_config = "U-mapper"
+                    options3.drop_privileges=False
+                    matrix = RGBMatrix(options = options3)
                 else:
                     print('command error')
                     writer.write('\r\ncommandfailok\r\n')
