@@ -108,9 +108,9 @@ async def shell(reader, writer):
                     matrix.SetPixelsthreeCrosshair(x1,y1,x2,y2,x3,y3,color1,color2,color3)
                     time.sleep(0.01)
                 elif mode == '1A':
-                    color_1set = data1+data2+data3+data4
-                    color_2set = data5+data6+data7+data8
-                    color_3set = data9+data10+data11+data12
+                    color_1set = data4+data3+data2+data1
+                    color_2set = data8+data7+data6+data5
+                    color_3set = data12+data11+data10+data9
                     color1 = int(color_1set)
                     color2 = int(color_2set)
                     color3 = int(color_3set)
