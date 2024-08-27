@@ -72,20 +72,20 @@ async def shell(reader, writer):
                 if  x2 > 224:
                     x2=0
                 else:
-                    x2 = x2 + 1
+                    #x2 = x2 + 1
                 if  y2 > 160:
                     y2=0
                 else:
-                    y2 = y2 + 1
+                    #y2 = y2 + 1
             
                 if  x3 > 224:
                     x3=0
                 else:
-                    x3 = x3 + 1
+                    #x3 = x3 + 1
                 if  y3 > 160:
                     y3=0
                 else:
-                    y3 = y3 + 1
+                    #y3 = y3 + 1
                 #time.sleep(0.05)
 
             elif mode == 1:
