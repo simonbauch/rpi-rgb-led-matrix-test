@@ -9,7 +9,7 @@ async def shell(reader, writer):
     y2 = 20
     x3 = 66
     y3 = 88
-    mode = 1
+    mode = 2
     while True:
         # read stream until '?' mark is found
         outp = await reader.read(1024)

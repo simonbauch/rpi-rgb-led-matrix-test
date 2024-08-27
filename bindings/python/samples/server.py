@@ -137,11 +137,13 @@ async def shell(reader, writer):
                         time.sleep(0.01)
                 elif mode == '2A':
                     print("Set large Mode")
+                    options.chain_length = 14
+                    matrix = RGBMatrix(options = options)
                 elif mode == '2B':
                     print("Set to small mode")
                     #MAtrix zerstören und mit neuen Options erneut erstellen
-                    #options.chain_length = 10
-                    #matrix = RGBMatrix(options = options)
+                    options.chain_length = 10
+                    matrix = RGBMatrix(options = options)
                 else:
                     print('command error')
                     writer.write('\r\ncommandfailok\r\n')
