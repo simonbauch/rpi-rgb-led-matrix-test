@@ -124,7 +124,7 @@ async def shell(reader, writer):
                     x = 1
                     y = 1
                     color_tst = 1745404 #das oragne
-                    while x<223 && y<159:
+                    while x<223 & y<159:
                         x=x+1
                         y=y+1
                         if x==224:
