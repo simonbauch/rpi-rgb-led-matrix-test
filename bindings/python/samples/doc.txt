@@ -5,8 +5,8 @@ Sampe:  0A;128;128;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok
     00: Test
     0A: Single Crosshair (6Bytes Daten) (XXX;YYY)
     0B: Dual Crosshair   (12Bytes Daten)
-    0C: Tripple Crosshair (not implemented) (18Bytes Daten)
-    1A: Setcolor1 (XXX;XXX;XXX;YYY;YYY;YYY;ZZZ;ZZZ;ZZZ) (color1;color2;color3)
+    0C: Tripple Crosshair  (18Bytes Daten)
+    1A: Setcolor1 (XXX;XXX;XXX;XXX;YYY;YYY;YYY;YYY;ZZZ;ZZZ;ZZZ;ZZZ) (color1;color2;color3)
     2A: Set Mode large
     2B: Set Mode small
 
