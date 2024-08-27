@@ -140,7 +140,7 @@ async def shell(reader, writer):
                     options2 = RGBMatrixOptions()
                     options2.rows = 32
                     options2.cols = 32
-                    options2.chain_length = 10
+                    options2.chain_length = 14
                     options2.parallel = 3 #
                     options2.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
                     options2.gpio_slowdown = 4  
