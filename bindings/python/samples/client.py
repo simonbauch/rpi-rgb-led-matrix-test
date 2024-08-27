@@ -128,7 +128,7 @@ async def shell(reader, writer):
                 writer.write(out)
             elif mode == 2:
                 mode = 1
-                out = "2B;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
+                out = "2A;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
                 print(out)
                 writer.write(out)
 
