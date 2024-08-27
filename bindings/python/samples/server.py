@@ -121,6 +121,19 @@ async def shell(reader, writer):
                 elif mode == '00':
                     #code for test here
                     print('test')
+                    x = 1
+                    y = 1
+                    color_tst = 1745404 #das oragne
+                    while x<223 && y<159:
+                        x=x+1
+                        y=y+1
+                        if x==224:
+                            x=1
+                        if y==160:
+                            y=1
+                        matrix.Clear()
+                        matrix.SetPixelsCrosshair(x, y,color_tst)
+                        time.sleep(0.01)
                 else:
                     print('command error')
                     writer.write('\r\ncommandfailok\r\n')
