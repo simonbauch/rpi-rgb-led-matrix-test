@@ -16,7 +16,7 @@ options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-ha
 options.gpio_slowdown = 4  
 options.multiplexing = 1
 options.pixel_mapper_config = "U-mapper"
-options.drop_privileges=True
+options.drop_privileges=False
 
 matrix = RGBMatrix(options = options)
 
@@ -146,7 +146,7 @@ async def shell(reader, writer):
                     options2.gpio_slowdown = 4  
                     options2.multiplexing = 1
                     options2.pixel_mapper_config = "U-mapper"
-                    options2.drop_privileges=False
+                    options2.drop_privileges=True
                     matrix = RGBMatrix(options = options2)
                     
                 elif mode == '2B':
@@ -161,7 +161,7 @@ async def shell(reader, writer):
                     options3.gpio_slowdown = 4  
                     options3.multiplexing = 1
                     options3.pixel_mapper_config = "U-mapper"
-                    options3.drop_privileges=False
+                    options3.drop_privileges=True
                     matrix = RGBMatrix(options = options3)
                 else:
                     print('command error')
