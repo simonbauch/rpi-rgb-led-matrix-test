@@ -18,7 +18,7 @@ options.multiplexing = 1
 options.pixel_mapper_config = "U-mapper"
 options.drop_privileges=False
 
-matrix = RGBMatrix(options = options)
+#matrix = RGBMatrix(options = options)
 
 color1 = 1745005
 color1_1 = 872574
