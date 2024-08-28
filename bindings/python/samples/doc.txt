@@ -17,4 +17,5 @@ Sampe:  0A;128;128;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok
     ok
 
 
-Startup procedere: 1. Set Mode (2A / 2B)  2.Do what you want
+Startup procedere: 1. Set Mode (2A / 2B)  2.Do what you want / Nach beendigung der Verbindung Server neustarten, 
+sonst gibt es meherer Matizen, deshalb funktioniert es nicht
