@@ -139,6 +139,6 @@ async def shell(reader, writer):
     print()
 
 loop = asyncio.get_event_loop()
-coro = telnetlib3.open_connection('10.42.0.111', 6023, shell=shell)
+coro = telnetlib3.open_connection('10.42.0.105', 6023, shell=shell)
 reader, writer = loop.run_until_complete(coro)
 loop.run_until_complete(writer.protocol.waiter_closed)
