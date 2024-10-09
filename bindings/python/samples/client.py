@@ -88,7 +88,7 @@ async def shell(reader, writer):
                     y3 = y3 + 1
                 #time.sleep(0.05)
 
-            elif mode == 1:
+            elif mode == 1: #Change / Set colors 
                 mode = 0
                 color1 = 9999999
                 color2 = 872574
@@ -126,12 +126,16 @@ async def shell(reader, writer):
                 out = "1A;"+data1+";"+data2+";"+data3+";"+data4+";"+data5+";"+data6+";"+data7+";"+data8+";"+data9+";"+data10+";"+data11+";"+data12+";ok"
                 print(out)
                 writer.write(out)
-            elif mode == 2:
+            elif mode == 2: #Set panel size: 2A: Large 2B:Small
                 mode = 1
                 out = "2A;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
                 print(out)
                 writer.write(out)
-
+            elif mode == 3: #Reset / Delete Panel class 
+                mode = 1
+                out = "2C;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok"
+                print(out)
+                writer.write(out)
         # display all server output
         print(outp, flush=True)
 

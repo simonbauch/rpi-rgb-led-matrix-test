@@ -8,7 +8,8 @@ Sampe:  0A;128;128;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;xxx;ok
     0C: Tripple Crosshair  (18Bytes Daten)
     1A: Setcolor1 (XXX;XXX;XXX;XXX;YYY;YYY;YYY;YYY;ZZZ;ZZZ;ZZZ;ZZZ) (color1;color2;color3)
     2A: Set Mode large
-    2B: Set Mode small
+    2B: Set Mode small#
+    2C: Reset Panel
 
 36-Bytes Daten:
     Koordinaten getrennt duch;

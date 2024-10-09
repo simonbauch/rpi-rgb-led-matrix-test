@@ -24,7 +24,7 @@ color1 = 1745005
 color1_1 = 872574
 color2 = 1745404 #Das passende Orange
 color3 = 1990099
-
+fail = 1
 
 state = True
 async def shell(reader, writer):
@@ -32,6 +32,12 @@ async def shell(reader, writer):
         writer.write('\r\nok\r\n')
         await writer.drain()
         inp = await reader.read(53)
+        if fail==1: # delete Matrix in case of error 
+            try:
+                del matrix
+                fail = 0
+            except:    
+                fail = 0
         if inp:
             print(inp)
             mode = inp[0:2]
@@ -163,6 +169,9 @@ async def shell(reader, writer):
                     options3.pixel_mapper_config = "U-mapper"
                     options3.drop_privileges=True
                     matrix = RGBMatrix(options = options3)
+                elif mode == '2C':
+                    print("Delete Matirx")
+                    del matrix
                 else:
                     print('command error')
                     writer.write('\r\ncommandfailok\r\n')
@@ -171,14 +180,13 @@ async def shell(reader, writer):
                 print('command / data error')
                 writer.write('\r\ncommandfailok\r\n')
                 await writer.drain()
-
-
-                
-
-            
+         
     writer.close()
+def connectionLost():
+    fail=1
 
 loop = asyncio.get_event_loop()
 coro = telnetlib3.create_server(port=6023, shell=shell)
+coro.connection_lost(connectionLost)
 server = loop.run_until_complete(coro)
 loop.run_until_complete(server.wait_closed())
