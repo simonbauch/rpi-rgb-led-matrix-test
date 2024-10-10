@@ -187,6 +187,6 @@ def connectionLost():
 
 loop = asyncio.get_event_loop()
 coro = telnetlib3.create_server(port=6023, shell=shell)
-coro.connection_lost(connectionLost)
 server = loop.run_until_complete(coro)
+server.connection_lost(connectionLost)
 loop.run_until_complete(server.wait_closed())
