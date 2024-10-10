@@ -6,26 +6,25 @@ import asyncio, telnetlib3
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 
-# Configuration for the matrix
-#options = RGBMatrixOptions()
-#options.rows = 32
-#options.cols = 32
-#options.chain_length = 14
-#options.parallel = 3
-#options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
-#options.gpio_slowdown = 4  
-#options.multiplexing = 1
-#options.pixel_mapper_config = "U-mapper"
-#options.drop_privileges=False
+ Configuration for the matrix
+options = RGBMatrixOptions()
+options.rows = 32
+options.cols = 32
+options.chain_length = 14
+options.parallel = 3
+options.hardware_mapping = 'regular' # If you have an Adafruit HAT: 'adafruit-hat'
+options.gpio_slowdown = 4  
+options.multiplexing = 1
+options.pixel_mapper_config = "U-mapper"
+options.drop_privileges=False
 
-#matrix = RGBMatrix(options = options)
+matrix = RGBMatrix(options = options)
 
 color1 = 1745005
 color1_1 = 872574
 color2 = 1745404 #Das passende Orange
 color3 = 1990099
 matrixset = 0
-matrix = null 
 
 state = True
 async def shell(reader, writer):
