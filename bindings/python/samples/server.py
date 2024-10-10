@@ -25,10 +25,12 @@ color1_1 = 872574
 color2 = 1745404 #Das passende Orange
 color3 = 1990099
 matrixset = 0
+matrix = null 
 
 state = True
 async def shell(reader, writer):
     global matrixset
+    global matrix
     while state:
         writer.write('\r\nok\r\n')
         await writer.drain()
