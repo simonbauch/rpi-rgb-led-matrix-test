@@ -1,4 +1,4 @@
-while TRUE
+while true
 do
     python3 server.py
 done
