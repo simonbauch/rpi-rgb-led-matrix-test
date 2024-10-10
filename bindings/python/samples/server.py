@@ -34,7 +34,7 @@ async def shell(reader, writer):
         inp = await reader.read(53)
         if fail==1: # delete Matrix in case of error 
             try:
-                del matrix
+                __dealloc__(matrix)
                 fail = 0
             except:    
                 fail = 0
