@@ -32,47 +32,47 @@ async def shell(reader, writer):
     global matrixset
     global matrix
     while state:
-        writer.write('\r\nok\r\n')
+        #writer.write('\r\nok\r\n')
         await writer.drain()
         inp = await reader.read(53)
         if inp:
-            print(inp)
+            #print(inp)
             mode = inp[0:2]
-            print(mode)
+            #print(mode)
             data1 = inp[3:6]
-            print(data1)
+            #print(data1)
             data2 = inp[7:10]
-            print(data2)
+            #print(data2)
             data3 = inp[11:14]
-            print(data3)
+            #print(data3)
             data4 = inp[15:18]
-            print(data4)
+            #print(data4)
             data5 = inp[19:22]
-            print(data5)
+            #print(data5)
             data6 = inp[23:26]
-            print(data6)
+            #print(data6)
             data7 = inp[27:30]
-            print(data7)
+            #print(data7)
             data8 = inp[31:34]
-            print(data8)
+            #print(data8)
             data9 = inp[35:38]
-            print(data9)
+            #print(data9)
             data10 = inp[39:42]
-            print(data10)
+            #print(data10)
             data11 = inp[43:46]
-            print(data11)
+            #print(data11)
             data12 = inp[47:50]
-            print(data12)
+            #print(data12)
             flag = inp[51:53]
-            print(flag)
+            #print(flag)
             if flag =='ok':  #Transmission mostly ok
                 if mode == '0A':  #switch cases
                     #code for singel crosshair here
-                    print('singl')
+                    #print('singl')
                     x1 = int(data1)
                     y1 = int(data2)
-                    print(x1)
-                    print(y1)
+                    #print(x1)
+                    #print(y1)
                     matrix.Clear()
                     #matrix.SetPixelsCrosshair(x1-1, y1-1,color1_1)
                     matrix.SetPixelsCrosshair(x1, y1,color1)
@@ -81,33 +81,33 @@ async def shell(reader, writer):
 
                 elif mode == '0B':
                     #code for double crosshair here
-                    print('double')
+                    #print('double')
                     x1 = int(data1)
                     y1 = int(data2)
                     x2 = int(data3)
                     y2 = int(data4)
-                    print(x1)
-                    print(y1)
-                    print(x2)
-                    print(y2)
+                    #print(x1)
+                    #print(y1)
+                    #print(x2)
+                    #print(y2)
                     matrix.Clear()
                     matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color1_1)
                     time.sleep(0.01)
                 elif mode == '0C':
                     #code for tripple crosshair here
-                    print('tripple')
+                    #print('tripple')
                     x1 = int(data1)
                     y1 = int(data2)
                     x2 = int(data3)
                     y2 = int(data4)
                     x3 = int(data5)
                     y3 = int(data6)
-                    print(x1)
-                    print(y1)
-                    print(x2)
-                    print(y2)
-                    print(x3)
-                    print(y3)
+                    #print(x1)
+                    #print(y1)
+                    #print(x2)
+                    #print(y2)
+                    #print(x3)
+                    #print(y3)
                     matrix.Clear()
                     matrix.SetPixelsthreeCrosshair(x1,y1,x2,y2,x3,y3,color1,color2,color3)
                     time.sleep(0.01)
@@ -118,13 +118,13 @@ async def shell(reader, writer):
                     color1 = int(color_1set)
                     color2 = int(color_2set)
                     color3 = int(color_3set)
-                    print('color')
-                    print(color1)
-                    print(color2)
-                    print(color3)
+                    #print('color')
+                    #print(color1)
+                    #print(color2)
+                    #print(color3)
                 elif mode == '00':
                     #code for test here
-                    print('test')
+                    #print('test')
                     x = 1
                     y = 1
                     color_tst = 1745404 #das oragne
@@ -140,7 +140,7 @@ async def shell(reader, writer):
                         time.sleep(0.01)
                 elif mode == '2A':
                     if matrixset == 0:    
-                        print("Set large Mode")
+                        #print("Set large Mode")
                         options2 = RGBMatrixOptions()
                         options2.rows = 32
                         options2.cols = 32
@@ -156,7 +156,7 @@ async def shell(reader, writer):
                     
                 elif mode == '2B':
                     if matrixset == 0:    
-                        print("Set to small mode")
+                        #print("Set to small mode")
                         options3 = RGBMatrixOptions()
                         options3.rows = 32
                         options3.cols = 32
@@ -169,11 +169,11 @@ async def shell(reader, writer):
                         options3.drop_privileges=True
                         matrix = RGBMatrix(options = options3)
                         matrixset = 1
-                elif mode == '2C':
-                    print("Delete Matirx")
-                    del matrix
+                #elif mode == '2C':
+                    #print("Delete Matirx")
+                    #del matrix
                 else:
-                    print('command error')
+                    #print('command error')
                     writer.write('\r\ncommandfailok\r\n')
                     await writer.drain()
             else:
