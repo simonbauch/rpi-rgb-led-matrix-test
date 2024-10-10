@@ -28,6 +28,7 @@ matrixset = 0
 
 state = True
 async def shell(reader, writer):
+    global matrixset
     while state:
         writer.write('\r\nok\r\n')
         await writer.drain()
