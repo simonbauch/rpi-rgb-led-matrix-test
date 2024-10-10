@@ -32,7 +32,7 @@ async def shell(reader, writer):
     global matrixset
     global matrix
     while state:
-        #writer.write('\r\nok\r\n')
+        writer.write('\r\nok\r\n')
         await writer.drain()
         inp = await reader.read(53)
         if inp:
