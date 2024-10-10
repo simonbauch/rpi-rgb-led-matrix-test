@@ -6,7 +6,8 @@ import asyncio, telnetlib3
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 
- Configuration for the matrix
+#Configuration for the matrix  
+
 options = RGBMatrixOptions()
 options.rows = 32
 options.cols = 32
