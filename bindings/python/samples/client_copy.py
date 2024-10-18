@@ -3,8 +3,8 @@ import time
 
 
 async def shell(reader, writer):
-    x1 = 0
-    y1 = 0
+    x1 = 95  # *6mm = real Postion in Array;;; OBACHT: Y1; X1; getauscht Hier methode zum setzen
+    y1 = 114
     x2 = 100
     y2 = 20
     x3 = 66
@@ -57,36 +57,11 @@ async def shell(reader, writer):
                 else:
                     y3s=str(y3)
             
-                out = "0C;"+x1s+";"+y1s+";"+x2s+";"+y2s+";"+x3s+";"+y3s+";xxx;xxx;xxx;xxx;xxx;xxx;ok"
+                out = "0A;"+x1s+";"+y1s+";"+x2s+";"+y2s+";"+x3s+";"+y3s+";xxx;xxx;xxx;xxx;xxx;xxx;ok"
                 print(out)
                 writer.write(out)
-                if  x1 > 224:
-                    x1=0
-                else:
-                    x1 = x1 + 1
-                if  y1 > 160:
-                    y1=0
-                else:
-                    y1 = y1 + 1
-            
-                if  x2 > 224:
-                    x2=0
-                else:
-                    x2 = x2 + 1
-                if  y2 > 160:
-                    y2=0
-                else:
-                    y2 = y2 + 1
-            
-                if  x3 > 224:
-                    x3=0
-                else:
-                    x3 = x3 + 1
-                if  y3 > 160:
-                    y3=0
-                else:
-                    y3 = y3 + 1
-                time.sleep(0.05)
+                
+                #time.sleep(0.05)
 
             elif mode == 1: #Change / Set colors 
                 mode = 0
