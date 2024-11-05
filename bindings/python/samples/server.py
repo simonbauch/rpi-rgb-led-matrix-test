@@ -111,6 +111,24 @@ async def shell(reader, writer):
                     matrix.Clear()
                     matrix.SetPixelsthreeCrosshair(x1,y1,x2,y2,x3,y3,color1,color2,color3)
                     time.sleep(0.01)
+                elif mode == '0D':
+                    #code for tripple crosshair here
+                    #print('tripple')
+                    x1 = int(data1)
+                    y1 = int(data2)
+                    x2 = int(data3)
+                    y2 = int(data4)
+                    x3 = int(data5)
+                    y3 = int(data6)
+                    #print(x1)
+                    #print(y1)
+                    #print(x2)
+                    #print(y2)
+                    #print(x3)
+                    #print(y3)
+                    matrix.Clear()
+                    matrix.SetPixelsthreeCrosshairsmall(x1,y1,x2,y2,x3,y3,color1,color2,color3)
+                    time.sleep(0.01)
                 elif mode == '1A':
                     color_1set = data4+data3+data2+data1
                     color_2set = data8+data7+data6+data5
