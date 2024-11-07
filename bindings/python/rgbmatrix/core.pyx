@@ -151,24 +151,16 @@ cdef class Canvas:
         g3 = (color3 >> 8) & 0xFF
         b3 = (color3 >> 16) & 0xFF
         for col in range(0, frame_width,1):
-            for row in range(0, frame_height,1):
-                        
+            for row in range(0, frame_height,1):                        
                     if ((y1 > (row - lenght)) and (y1 < (row + lenght))) and ((x1 > (col - lenght)) and (x1 < (col + lenght))):
                         if row == y1 or col ==x1:    
                             my_canvas.SetPixel(col, row, r1, g1, b1)
-                        print("true")
-                    if col==x2 or row==y2:
-                        if x1!=x2 and y1!=y2:
-                            if (row > y2 - lenght) and (row < y2 + lenght):
-                                my_canvas.SetPixel(col, row, r2, g2, b2)
-                            elif (col > x2 - lenght) and (col < x2 + lenght):
-                                my_canvas.SetPixel(col, row, r2, g2, b2)
-                    if col==x3 or row==y3:
-                        if x1!=x3 and x2!=x3 and y1!=y3 and y2!=y3:
-                            if (row > y3 - lenght) and (row < y3 + lenght):
-                                my_canvas.SetPixel(col, row, r3, g3, b3)
-                            elif (col > x3 - lenght) and (col < x3 + lenght):
-                                my_canvas.SetPixel(col, row, r3, g3, b3)
+                    if ((y2 > (row - lenght)) and (y2 < (row + lenght))) and ((x2 > (col - lenght)) and (x2 < (col + lenght))):
+                        if row == y2 or col ==x2:    
+                            my_canvas.SetPixel(col, row, r2, g2, b2)
+                    if ((y3 > (row - lenght)) and (y3 < (row + lenght))) and ((x3 > (col - lenght)) and (x3 < (col + lenght))):
+                        if row == y3 or col ==x3:    
+                            my_canvas.SetPixel(col, row, r3, g3, b3)
                     
     
            
