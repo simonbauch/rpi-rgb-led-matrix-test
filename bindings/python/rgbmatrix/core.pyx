@@ -127,14 +127,13 @@ cdef class Canvas:
                     if col==x3 or row==y3:
                         if x1!=x3 and x2!=x3 and y1!=y3 and y2!=y3:
                             my_canvas.SetPixel(col, row, r3, g3, b3)
-    def SetPixelsthreeCrosshairsmall(self, int x1, int y1, int x2, int y2, int x3, int y3, uint32_t color1, uint32_t color2, uint32_t color3):
+    def SetPixelsthreeCrosshairsmall(self, int x1, int y1, int x2, int y2, int x3, int y3, uint32_t color1, uint32_t color2, uint32_t color3, uint32_t lenght):
         cdef cppinc.FrameCanvas* my_canvas = <cppinc.FrameCanvas*>self.__getCanvas()
         cdef int frame_width = my_canvas.width()
         cdef int frame_height = my_canvas.height()
         cdef int row = 0
         cdef int col = 0
         cdef uint8_t r1, g1, b1, r2, g2, b2, r3, g3, b3
-        lenght = 10
         x1=x1-1
         y1=y1-1
         x2=x2-1
