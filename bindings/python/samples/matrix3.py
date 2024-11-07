@@ -23,10 +23,14 @@ x1 = 10
 y1 = 10
 x2 = 125
 y2 = 125
+x3 = 0
+y3 = 25
 color1 = 16448250
 color2 = 1745404 #Das passende Orange
+color3 = 1745404 #Das passende Orange
 
-matrix.SetPixelstwoCrosshair(x1,y1,x2,y2,color1,color2)
+
+matrix.SetPixelsthreeCrosshairsmall(x1,y1,x2,y2,x3,x3,color1,color2,color3)
 try:
     print("Press CTRL-C to stop.")
     while True:
