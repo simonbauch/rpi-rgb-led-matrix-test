@@ -155,6 +155,7 @@ cdef class Canvas:
                     if col==x1 or row==y1:
                         if (row > (y1 - lenght)) and (row < (y1 + lenght)):
                             my_canvas.SetPixel(col, row, r1, g1, b1)
+                            print("true")
                         elif (col > (x1 - lenght)) and (col < (x1 + lenght)):
                             my_canvas.SetPixel(col, row, r1, g1, b1)
                     if col==x2 or row==y2:
