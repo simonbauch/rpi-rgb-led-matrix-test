@@ -57,7 +57,7 @@ async def shell(reader, writer):
                 else:
                     y3s=str(y3)
             
-                out = "0D;"+x1s+";"+y1s+";"+x2s+";"+y2s+";"+x3s+";"+y3s+";015;xxx;xxx;xxx;xxx;xxx;ok"
+                out = "0D;"+x1s+";"+y1s+";"+x2s+";"+y2s+";"+x3s+";"+y3s+";030;xxx;xxx;xxx;xxx;xxx;ok"
                 print(out)
                 writer.write(out)
                 if  x1 > 224:
@@ -86,7 +86,6 @@ async def shell(reader, writer):
                     y3=0
                 else:
                     y3 = y3 + 1
-                time.sleep(0.05)
 
             elif mode == 1: #Change / Set colors 
                 mode = 0
