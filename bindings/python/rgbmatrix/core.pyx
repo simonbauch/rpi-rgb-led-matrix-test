@@ -152,12 +152,12 @@ cdef class Canvas:
         b3 = (color3 >> 16) & 0xFF
         for col in range(0, frame_width,1):
             for row in range(0, frame_height,1):
-                    if col==x1 or row==y1:
-                        if (y1 > (row - lenght)) and (y1 < (row + lenght)):
-                            my_canvas.SetPixel(col, row, r1, g1, b1)
-                            print("true")
-                        elif (x1 > (col - lenght)) and (x1 < (col + lenght)):
-                            my_canvas.SetPixel(col, row, r1, g1, b1)
+                        
+                    if (y1 > (row - lenght)) and (y1 < (row + lenght)):
+                        my_canvas.SetPixel(col, row, r1, g1, b1)
+                        print("true")
+                    elif (x1 > (col - lenght)) and (x1 < (col + lenght)):
+                        my_canvas.SetPixel(col, row, r1, g1, b1)
                     if col==x2 or row==y2:
                         if x1!=x2 and y1!=y2:
                             if (row > y2 - lenght) and (row < y2 + lenght):
