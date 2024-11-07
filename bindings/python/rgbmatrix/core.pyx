@@ -155,19 +155,19 @@ cdef class Canvas:
                     if col==x1 or row==y1:
                         if row > y1 - lenght and row < y1 + lenght:
                             my_canvas.SetPixel(col, row, r1, g1, b1)
-                        else if col > x1 - lenght and col < x1 + lenght:
+                        elif col > x1 - lenght and col < x1 + lenght:
                             my_canvas.SetPixel(col, row, r1, g1, b1)
                     if col==x2 or row==y2:
                         if x1!=x2 and y1!=y2:
                             if row > y2 - lenght and row < y2 + lenght:
                                 my_canvas.SetPixel(col, row, r2, g2, b2)
-                            else if col > x2 - lenght and col < x2 + lenght:
+                            elif col > x2 - lenght and col < x2 + lenght:
                                 my_canvas.SetPixel(col, row, r2, g2, b2)
                     if col==x3 or row==y3:
                         if x1!=x3 and x2!=x3 and y1!=y3 and y2!=y3:
                             if row > y3 - lenght and row < y3 + lenght:
                                 my_canvas.SetPixel(col, row, r3, g3, b3)
-                            else if col > x3 - lenght and col < x3 + lenght:
+                            elif col > x3 - lenght and col < x3 + lenght:
                                 my_canvas.SetPixel(col, row, r3, g3, b3)
                     
     
